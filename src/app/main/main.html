@@ -6,15 +6,25 @@
 <div class="item">微博</div>
 <div class="item" ui-sref="about">关于</div>
 </div>
-<div ui-view></div>
-<div style="width: 50%;margin-left: 25%;color: white">
-  <h1>About</h1>
+<div style="width: 50%;margin-left: 25%;color: white;height: 500px;padding: 5px;display: flex;flex-direction: row;justify-content: center;align-items: center;">
+<div style="margin-right:10%;outline: none;" ng-click="minus()">
+  <span class="glyphicon glyphicon-chevron-left" style="transform: scale(3);"></span>
+</div>
+<div ng-if="page1" class="fadein fadeout" style="text-align: center;">
+   <h1>About</h1>
   <h2>关于我</h2>
-  <li>务实现在</li>
-  <li>憧憬未来</li>
-  <div style="margin-top: 20px;">
-    坐标上海，90后，工科男。
+  <div>
+  <span class="tecitem">务实现在</span>
+  <span class="tecitem">憧憬未来</span>
   </div>
+  <div>
+  <span class="tecitem" style="font-size: 1.5em">坐标:</span>
+  <span class="tecitem" style="color:#6495ED ">上海</span>
+  <span class="tecitem" style="color:#2E8B57">标签</span>
+  <span class="tecitem" style="color:#20B2AA">90后</span>
+  <span class="tecitem">程序员</span>
+  </div>
+  <div>
   <div style="margin-top: 20px;">
     本科的时候开始写博客，缘由是下定决心转CS专业，记录一下自己的学习和生活。现在看来，学习的内容有点太少了，生活的吐槽倒是一大堆。所以为了当一个好的程序员，干脆弃掉原来的点点博客，折腾一个属于自己的地盘，记录一些学习笔记和自己的想法，就当督促自己吧。
   </div>
@@ -29,4 +39,51 @@
     <h2>海特</h2>
   </div>
   <div>很少很少。。。。</div>
+</div>
+</div>
+<div ng-if="page2" class="fadein fadeout" style="text-align: center;">
+  <h1>擅长技术</h1>
+  <div>
+  <span class="tecitem">css</span>
+  <span class="tecitem">less</span>
+  </div>
+  <div>
+  <span class="tecitem">javascript</span>
+  <span class="tecitem">jQuery</span>
+  <span class="tecitem">Bootstrap</span>
+  <span class="tecitem">AngularJS</span>
+  </div>
+  <div>
+  <span class="tecitem">HTML5</span>
+  <span class="tecitem">ES6</span>
+  <span class="tecitem">NodeJS</span>
+  <span class="tecitem">Express</span>
+  </div>
+  <div>
+  <span class="tecitem">网页设计</span>
+  <span class="tecitem">平面设计</span>
+  </div>
+</div>
+<div ng-if="page3" class="fadein fadeout" style="text-align: center;">
+  <h1>实习经历</h1>
+  <div>
+  <span class="tecitem">eBay</span>
+  <span class="tecitem">前端工程师</span>
+  </div>
+  <div>
+  <span class="tecitem" style="font-size: 1.5em;color: #6495ED">2016年5月</span>
+  <span class="tecitem" style="font-size: 1.5em;color: #6495ED">至</span>
+  <span class="tecitem" style="font-size: 1.5em;color: #6495ED">2016年8月</span>
+  </div>
+  <div>
+  <span class="tecitem">相关技术：</span>
+  <span class="tecitem">angularjs,BootStrap</span>
+  </div>
+</div>
+<div ng-if="page0" class="fadein fadeout" style="text-align: center;">
+  <h1>很高兴认识你</h1>
+</div>
+<div style="margin-left:10%;outline: none;" ng-click="test()">
+  <span class="glyphicon glyphicon-chevron-right" style="transform: scale(3);"></span>
+</div>
 </div>

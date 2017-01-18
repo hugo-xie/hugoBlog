@@ -1,32 +1,29 @@
-export class MainController {
-  constructor ($timeout, webDevTec, toastr) {
+export default ($scope) => {
     'ngInject';
+    var i = 1;
+    $scope.page1 = true;
+    $scope.test = () =>{
+      if (i<3) {
+        $scope.page0 = false;
+        $scope.page1 = false;
+      $scope.page2 = false;
+      $scope.page3 = false;
+        i = i+1; 
+        let b = "page"+i;
+        $scope[b] = true;
 
-    this.awesomeThings = [];
-    this.classAnimation = '';
-    this.creationDate = 1484627631780;
-    this.toastr = toastr;
+      }
+    }
+    $scope.minus = () =>{
+      if (1<i<4) {
+        $scope.page0 = false;
+        $scope.page1 = false;
+      $scope.page2 = false;
+      $scope.page3 = false;
+        i = i-1; 
+        let b = "page"+i;
+        $scope[b] = true;
 
-    this.activate($timeout, webDevTec);
-  }
-
-  activate($timeout, webDevTec) {
-    this.getWebDevTec(webDevTec);
-    $timeout(() => {
-      this.classAnimation = 'rubberBand';
-    }, 4000);
-  }
-
-  getWebDevTec(webDevTec) {
-    this.awesomeThings = webDevTec.getTec();
-
-    angular.forEach(this.awesomeThings, (awesomeThing) => {
-      awesomeThing.rank = Math.random();
-    });
-  }
-
-  showToastr() {
-    this.toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-    this.classAnimation = '';
-  }
+      }
+    }
 }

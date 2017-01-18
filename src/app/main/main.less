@@ -11,3 +11,36 @@
     border-top: 4px solid white;
   }
 }
+.tecitem{
+  display: inline-block;
+  font-size: 2em;
+  margin: 5px;
+  font-style: italic;
+  &:hover{
+    color: lightgreen;
+    transform:scale(2);
+
+  }
+}
+.projectitem{
+  display: flex;
+  width: 80%;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:center;
+}
+.fadein{
+  width: 80%;
+}
+ .fadein.ng-enter {
+ animation: priceenter 1s linear;
+}
+@keyframes priceenter{
+    from {transform:translateX(-300px);}
+    to  {transform:translateX(0px);}
+}
+@keyframes priceleave{
+    from {opacity: 1;}
+    to  {opacity: 0;}
+
+ }
