@@ -1,5 +1,7 @@
 export default ($scope) => {
     'ngInject';
+    // 应用 ID，用来识别应用
+
     var i = 1;
     $scope.page1 = true;
     $scope.test = () =>{
